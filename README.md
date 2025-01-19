@@ -116,6 +116,8 @@ Ces résultats montrent un bon début, mais il y a encore de la place pour amél
 ![mitric](https://github.com/user-attachments/assets/12a9f710-ddd2-421a-b13b-255bccdaa703)
 
 
+
 Utilisation :
 =>Après l'entraînement du modèle, vous pouvez tester sa performance avec une image provenant de votre jeu de données (ou d'autres images) : 
+
 ![result](https://github.com/user-attachments/assets/1111576b-c15f-405c-8db3-5c077c45c57c)
