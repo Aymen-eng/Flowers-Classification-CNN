@@ -94,4 +94,4 @@ Les étiquettes des classes (pour les catégories de fleurs) sont récupérées 
 class_labels = training_iterator.class_indices
 print(class_labels)
 
-![sun](https://github.com/user-attachments/assets/891f1d4a-2bd9-4684-9783-b2cbf058c30d)
+![mitric](https://github.com/user-attachments/assets/56a0e8fb-3bd3-4e1f-9019-122583394513)
