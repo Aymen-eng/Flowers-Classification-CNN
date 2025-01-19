@@ -1,0 +1,32 @@
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Charger le modèle sauvegardé
+model = load_model('/content/drive/My Drive/flowze_baseline_model.h5')
+
+# Charger et afficher l'image
+img = load_img('/content/sun.jpeg', target_size=(100, 100))  # Redimensionne l'image
+plt.imshow(img)
+plt.axis('off')
+plt.show()
+
+# Convertir l'image en tableau et ajouter une dimension batch
+img = img_to_array(img)  # Convertir en tableau NumPy
+img = np.expand_dims(img, axis=0)  # Ajouter une dimension batch : (1, 100, 100, 3)
+
+# Prédire avec le modèle
+result = model.predict(img)
+
+# Afficher les résultats
+class_labels = {'daisy': 0, 'dandelion': 1, 'rose': 2, 'sunflower': 3, 'tulip': 4}
+reverse_class_labels = {v: k for k, v in class_labels.items()}  # Inverser le dictionnaire pour mappage
+
+# Extraction de la classe prédite
+predicted_class_index = np.argmax(result)  # Obtenir l'indice avec la plus grande probabilité
+predicted_class_name = reverse_class_labels[predicted_class_index]  # Obtenir le nom de la classe
+
+print("Probabilités des classes :", result)
+print("Classe prédite (indice) :", predicted_class_index)
+print("Classe prédite (nom) :", predicted_class_name)
