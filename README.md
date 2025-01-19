@@ -3,7 +3,6 @@ Ce projet fait partie de la formation Udemy - Keras Deep Learning & Generative A
 
 Prérequis
 Avant de lancer le code, assurez-vous d'avoir les éléments suivants installés :
-
 Python 3.x
 Google Colab ou un autre environnement Python avec TensorFlow installé
 Pour installer TensorFlow localement, utilisez la commande suivante :
@@ -15,16 +14,27 @@ L'ensemble de données utilisé dans ce projet est une collection d'images de fl
 
 
 flowers_datasets/
+
     ├── flowers/
+    
     │   ├── train/
+    
     │   │   ├── classe1/
+    
     │   │   ├── classe2/
+    
     │   │   ├── ...
+    
     │   └── test/
+    
     │       ├── classe1/
+    
     │       ├── classe2/
+    
     │       ├── ...
+    
 Vous devez monter votre Google Drive et télécharger l'ensemble de données dans le répertoire spécifié pour que le script fonctionne.
+
 
 Configuration
 Monter Google Drive : Ce code utilise Google Colab, donc la première étape consiste à monter votre Google Drive pour accéder à l'ensemble de données.
@@ -93,6 +103,8 @@ model.save('/content/drive/My Drive/flowze_baseline_model.h5')
 Les étiquettes des classes (pour les catégories de fleurs) sont récupérées depuis training_iterator :
 class_labels = training_iterator.class_indices
 print(class_labels)
+
+
 => Après l'entraînement du modèle, voici les résultats obtenus :
 
 Accuracy : 70.37% (sur les données d'entraînement)
@@ -100,6 +112,7 @@ Loss : 0.7707 (sur les données d'entraînement)
 Validation Accuracy : 62.99% (sur les données de validation)
 Validation Loss : 0.9133 (sur les données de validation)
 Ces résultats montrent un bon début, mais il y a encore de la place pour améliorer la précision, notamment en ajustant les hyperparamètres, en ajoutant plus de données ou en testant avec des modèles plus complexes.
+
 ![mitric](https://github.com/user-attachments/assets/12a9f710-ddd2-421a-b13b-255bccdaa703)
 
 
