@@ -1,0 +1,64 @@
+from google.colab import drive
+drive.mount('/content/drive')
+
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
+!cp -r '/content/drive/My Drive/flowers_datasets' /content/
+print("dossier copié avec succés .")
+
+# Préparation des générateurs d'images pour l'entraînement et les tests
+train_datagen = ImageDataGenerator(
+    rescale=1./255,               # Normalisation des images
+    horizontal_flip=True,         # Retourner l'image horizontalement
+    rotation_range=20,            # Rotation de l'image entre -40° et +40°
+    width_shift_range=0.2,        # Déplacement horizontal de l'image (20% de la largeur)
+    height_shift_range=0.2,       # Déplacement vertical de l'image (20% de la hauteur)
+   
+)
+
+test_datagen = ImageDataGenerator(
+ rescale=1./255,               # Normalisation des images
+    horizontal_flip=True,         # Retourner l'image horizontalement
+    rotation_range=20,            # Rotation de l'image entre -40° et +40°
+    width_shift_range=0.2,        # Déplacement horizontal de l'image (20% de la largeur)
+    height_shift_range=0.2,       # Déplacement vertical de l'image (20% de la hauteur)
+   
+ )
+
+# Définition du modèle pour la classification multiclasse
+model = keras.Sequential()  # Correction de l'orthographe : 'Sequential'
+model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(100, 100, 3), padding='same'))
+model.add(layers.MaxPooling2D(2, 2))
+
+model.add(layers.Conv2D(64, (3, 3), activation='relu', padding='same'))
+model.add(layers.MaxPooling2D(2, 2))
+
+model.add(layers.Conv2D(128, (3, 3), activation='relu', padding='same'))
+model.add(layers.MaxPooling2D(2, 2))
+
+model.add(layers.Flatten())
+model.add(layers.Dense(512, activation='relu'))
+model.add(layers.Dense(5, activation='softmax'))  # 5 classes pour la classification
+
+# Préparation des itérateurs pour les ensembles d'entraînement et de test
+training_iterator = train_datagen.flow_from_directory('/content/flowers_datasets/flowers/train',
+                                                      batch_size=64,
+                                                      target_size=(100, 100))
+testing_iterator = test_datagen.flow_from_directory('/content/flowers_datasets/flowers/test',
+                                                     batch_size=64,
+                                                     target_size=(100, 100))
+
+# Compilation du modèle
+model.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='adam')
+
+# Entraînement du modèle
+history = model.fit(training_iterator, validation_data=testing_iterator, epochs=8)  
+
+# save model
+model.save('/content/drive/My Drive/flowze_baselinme_model.h5')
+#get the class labels from iterator
+class_labels = training_iterator.class_indices
+print(class_labels)
