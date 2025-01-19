@@ -1,4 +1,5 @@
 Classification des Fleurs avec TensorFlow
+
 Ce projet fait partie de la formation Udemy - Keras Deep Learning & Generative Adversarial Networks (GAN) 2023-6. Il implémente un modèle d'apprentissage profond pour classer des images de fleurs en utilisant TensorFlow et Keras. Le modèle est entraîné sur un ensemble de données d'images de fleurs et peut les classer en 5 catégories différentes.
 
 Prérequis
