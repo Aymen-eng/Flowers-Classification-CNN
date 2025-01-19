@@ -93,5 +93,16 @@ model.save('/content/drive/My Drive/flowze_baseline_model.h5')
 Les étiquettes des classes (pour les catégories de fleurs) sont récupérées depuis training_iterator :
 class_labels = training_iterator.class_indices
 print(class_labels)
+=> Après l'entraînement du modèle, voici les résultats obtenus :
 
-![mitric](https://github.com/user-attachments/assets/56a0e8fb-3bd3-4e1f-9019-122583394513)
+Accuracy : 70.37% (sur les données d'entraînement)
+Loss : 0.7707 (sur les données d'entraînement)
+Validation Accuracy : 62.99% (sur les données de validation)
+Validation Loss : 0.9133 (sur les données de validation)
+Ces résultats montrent un bon début, mais il y a encore de la place pour améliorer la précision, notamment en ajustant les hyperparamètres, en ajoutant plus de données ou en testant avec des modèles plus complexes.
+![mitric](https://github.com/user-attachments/assets/12a9f710-ddd2-421a-b13b-255bccdaa703)
+
+
+Utilisation :
+=>Après l'entraînement du modèle, vous pouvez tester sa performance avec une image provenant de votre jeu de données (ou d'autres images) : 
+![result](https://github.com/user-attachments/assets/1111576b-c15f-405c-8db3-5c077c45c57c)
