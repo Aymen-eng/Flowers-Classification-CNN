@@ -6,10 +6,8 @@ Prérequis
 Avant de lancer le code, assurez-vous d'avoir les éléments suivants installés :
 Python 3.x
 Google Colab ou un autre environnement Python avec TensorFlow installé
-Pour installer TensorFlow localement, utilisez la commande suivante :
 
 
-pip install tensorflow
 Jeu de données
 L'ensemble de données utilisé dans ce projet est une collection d'images de fleurs, classées en 5 catégories différentes. Dans cette cas l'ensemble de données est stocké dans Google Drive . La structure du répertoire devrait ressembler à ceci :
 
