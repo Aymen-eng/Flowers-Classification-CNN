@@ -97,16 +97,7 @@ Les étiquettes des classes (pour les catégories de fleurs) sont récupérées 
 class_labels = training_iterator.class_indices
 print(class_labels)
 
-/**************************************************************************/
 
-Lien du Model : https://drive.google.com/file/d/1t5KnSXUOptDUoYBihUyUuo0cDLxYd3ls/view?usp=drive_link
-Pour tester directement le modèle, voici les étapes générales à suivre :
-
-Télécharger le modèle : Vous pouvez télécharger le modèle entraîné depuis le lien que vous avez partagé et le charger dans votre code en utilisant la méthode load_model() de Keras.
-
-Test sur une nouvelle image : Après avoir chargé le modèle, vous pouvez préparer une image à tester en la prétraitant (comme redimensionner et la normaliser) puis la passer à travers le modèle pour obtenir une prédiction.
-
-/*****************************************************************************************************************************/
 
 => Après l'entraînement du modèle, voici les résultats obtenus :
 
@@ -123,6 +114,17 @@ Ces résultats montrent un bon début, mais il y a encore de la place pour amél
 
 ![mitric](https://github.com/user-attachments/assets/12a9f710-ddd2-421a-b13b-255bccdaa703)
 
+
+/**************************************************************************/
+
+Lien du Model : https://drive.google.com/file/d/1t5KnSXUOptDUoYBihUyUuo0cDLxYd3ls/view?usp=drive_link
+Pour tester directement le modèle, voici les étapes générales à suivre :
+
+Télécharger le modèle : Vous pouvez télécharger le modèle entraîné depuis le lien que vous avez partagé et le charger dans votre code en utilisant la méthode load_model() de Keras.
+
+Test sur une nouvelle image : Après avoir chargé le modèle, vous pouvez préparer une image à tester en la prétraitant (comme redimensionner et la normaliser) puis la passer à travers le modèle pour obtenir une prédiction.
+
+/***************************************************************************************************/
 
 
 Utilisation :
