@@ -17,21 +17,13 @@ L'ensemble de données utilisé dans ce projet est une collection d'images de fl
 flowers_datasets/
 
     ├── flowers/
-    
     │   ├── train/
-    
-    │   │   ├── classe1/
-    
-    │   │   ├── classe2/
-    
+    │   │   ├── daisy/
+    │   │   ├── dandelion/
     │   │   ├── ...
-    
     │   └── test/
-    
-    │       ├── classe1/
-    
-    │       ├── classe2/
-    
+    │       ├── daisy/
+    │       ├── dandelion/
     │       ├── ...
     
 Vous devez monter votre Google Drive et télécharger l'ensemble de données dans le répertoire spécifié pour que le script fonctionne.
