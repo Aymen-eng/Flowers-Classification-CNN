@@ -146,3 +146,6 @@ Utilisation :
 =>Après l'entraînement du modèle, vous pouvez tester sa performance avec une image provenant de votre jeu de données (ou d'autres images) : 
 
 ![result](https://github.com/user-attachments/assets/1111576b-c15f-405c-8db3-5c077c45c57c)
+
+![daisy](https://github.com/user-attachments/assets/2cce4a72-bcb6-4114-b50d-7f072d61faf9)
+
