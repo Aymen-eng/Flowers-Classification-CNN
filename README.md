@@ -110,10 +110,15 @@ Test sur une nouvelle image : Après avoir chargé le modèle, vous pouvez prép
 
 => Après l'entraînement du modèle, voici les résultats obtenus :
 
+
 Accuracy : 70.37% (sur les données d'entraînement)
+
 Loss : 0.7707 (sur les données d'entraînement)
+
 Validation Accuracy : 62.99% (sur les données de validation)
+
 Validation Loss : 0.9133 (sur les données de validation)
+
 Ces résultats montrent un bon début, mais il y a encore de la place pour améliorer la précision, notamment en ajustant les hyperparamètres, en ajoutant plus de données ou en testant avec des modèles plus complexes.
 
 ![mitric](https://github.com/user-attachments/assets/12a9f710-ddd2-421a-b13b-255bccdaa703)
