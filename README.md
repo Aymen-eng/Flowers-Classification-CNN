@@ -26,7 +26,7 @@ flowers_datasets/
     │       ├── dandelion/
     │       ├── ...
     
-Vous devez  télécharger l'ensemble de données a travers ce lien :
+Vous devez  télécharger l'ensemble de données a travers ce lien : https://drive.google.com/drive/folders/1u5s4ztiwrTJ_LTs9jlxZzZ7cWbhknDyC?usp=drive_link
 
 
 Explication Du Code De l'entraînement du modèle :
